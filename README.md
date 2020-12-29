@@ -11,7 +11,7 @@ This application controls a robot I made via bluetooth.
 
 App homepage           
 :-------------------------:
-![Screenshot_1609280684](https://user-images.githubusercontent.com/33325959/103317956-a636a380-49e1-11eb-8de9-7f064e3f4cce.png)
+![mainpage](https://user-images.githubusercontent.com/33325959/103318611-d67f4180-49e3-11eb-817b-fd76c843da1c.png)
 
 ## Purpose
 I wanted to use Arduino for a project and so I decided to make a simple robot that is controlled by an application. In addition, I wanted to use 3-D printing for this project 
