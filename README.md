@@ -22,4 +22,4 @@ and decided to use it for constructing the base. I liked making this project bec
 * Java
 * Arduino
 * OnShape (CAD)
-* C/C++
+* C++
