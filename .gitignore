@@ -1,0 +1,7 @@
+keystore.properties
+app/keystore.ks
+.gradle/
+build/
+local.properties
+*.iml
+.idea/

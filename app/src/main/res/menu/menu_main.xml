@@ -1,0 +1,16 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_Connect_Device"
+        android:title="Connect"
+        android:icon="@drawable/ic_bluetooth_connect_black"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_Disconnect_Device"
+        android:title="Disconnect"
+        android:icon="@drawable/ic_bluetooth_disconnect_black"
+        app:showAsAction="always" />
+
+</menu>
