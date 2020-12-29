@@ -66,11 +66,10 @@ public class Control_Robot extends AppCompatActivity {
         forward_Btn.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                if (event.getAction() == MotionEvent.ACTION_DOWN)
                     forward();
-                } else if (event.getAction() == MotionEvent.ACTION_UP) {
+                else if (event.getAction() == MotionEvent.ACTION_UP)
                     stop();
-                }
                 return true;
             }
         });
@@ -78,11 +77,10 @@ public class Control_Robot extends AppCompatActivity {
         down_Btn.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                if (event.getAction() == MotionEvent.ACTION_DOWN)
                     back();
-                } else if (event.getAction() == MotionEvent.ACTION_UP) {
+                else if (event.getAction() == MotionEvent.ACTION_UP)
                     stop();
-                }
                 return true;
             }
         });
@@ -90,11 +88,10 @@ public class Control_Robot extends AppCompatActivity {
         left_Btn.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                if (event.getAction() == MotionEvent.ACTION_DOWN)
                     left();
-                } else if (event.getAction() == MotionEvent.ACTION_UP) {
+                else if (event.getAction() == MotionEvent.ACTION_UP)
                     stop();
-                }
                 return true;
             }
         });
@@ -102,11 +99,10 @@ public class Control_Robot extends AppCompatActivity {
         right_Btn.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                if (event.getAction() == MotionEvent.ACTION_DOWN)
                     right();
-                } else if (event.getAction() == MotionEvent.ACTION_UP) {
+                else if (event.getAction() == MotionEvent.ACTION_UP)
                     stop();
-                }
                 return true;
             }
         });
@@ -154,9 +150,8 @@ public class Control_Robot extends AppCompatActivity {
                     }
                 }
             }
-            else{
+            else
                 message_User_Via_Snackbar("Already connected");
-            }
 
             return true;
         }
@@ -249,34 +244,31 @@ public class Control_Robot extends AppCompatActivity {
         }
     };
 
-        @Override
-        protected void onDestroy() {
-            super.onDestroy();
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
 
-            try {
-                unregisterReceiver(discover);
-            } catch(IllegalArgumentException e) {
-                e.printStackTrace();
-            }
-        }
+        try {
+            unregisterReceiver(discover);
+        } catch(IllegalArgumentException e) { }
+    }
 
-        @Override
-        protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-            if (resultCode == RESULT_OK){
-                message_User_Via_Snackbar("Bluetooth has been enabled since it was off");
-            }
-            if(resultCode == RESULT_CANCELED){
-                message_User_Via_Snackbar("Blutooth not enabled");
-            }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (resultCode == RESULT_OK){
+            message_User_Via_Snackbar("Bluetooth has been enabled since it was off");
         }
+        if(resultCode == RESULT_CANCELED){
+            message_User_Via_Snackbar("Blutooth not enabled");
+        }
+    }
 
     private class ConnectBT extends AsyncTask<Void, Void, Void>  //  UI thread
     {
         private boolean ConnectSuccess = true;
 
         @Override
-        protected void onPreExecute()
-        {
+        protected void onPreExecute() {
             progress = ProgressDialog.show(context, "Connecting...", "Please wait!!!");
         }
 
@@ -297,8 +289,7 @@ public class Control_Robot extends AppCompatActivity {
                     btSocket.connect(); //starts connection
                 }
             }
-            catch (IOException e)
-            {
+            catch (IOException e) {
                 ConnectSuccess = false;
             }
             return null;
@@ -308,14 +299,12 @@ public class Control_Robot extends AppCompatActivity {
         {
             super.onPostExecute(result);
 
-            if (!ConnectSuccess)
-            {
+            if (!ConnectSuccess) {
                 message_User_Via_Snackbar("Connection Failed. Try again.");
                 isBtConnected = false;
                 finish();
             }
-            else
-            {
+            else {
                 message_User_Via_Snackbar("Connected.");
                 isBtConnected = true;
             }
@@ -345,9 +334,7 @@ public class Control_Robot extends AppCompatActivity {
             try {
                 btSocket.getOutputStream().write(1);
             }
-            catch (IOException e) {
-                //Log.d("Main_Activity", "Error in moving forward");
-            }
+            catch (IOException e) { }
         }
     }
     private void back()
@@ -356,9 +343,7 @@ public class Control_Robot extends AppCompatActivity {
             try {
                 btSocket.getOutputStream().write(2);
             }
-            catch (IOException e) {
-                //Log.d("Main_Activity","Error in moving back");
-            }
+            catch (IOException e) { }
         }
     }
     private void left()
@@ -367,9 +352,7 @@ public class Control_Robot extends AppCompatActivity {
             try {
                 btSocket.getOutputStream().write(4);
             }
-            catch (IOException e) {
-                //Log.d("Main_Activity","Error in moving left");
-            }
+            catch (IOException e) { }
         }
     }
     private void right()
@@ -378,9 +361,7 @@ public class Control_Robot extends AppCompatActivity {
             try {
                 btSocket.getOutputStream().write(3);
             }
-            catch (IOException e) {
-                //Log.d("Main_Activity","Error in moving right");
-            }
+            catch (IOException e) { }
         }
     }
     private void stop()
@@ -389,9 +370,7 @@ public class Control_Robot extends AppCompatActivity {
             try {
                 btSocket.getOutputStream().write(0);
             }
-            catch (IOException e) {
-                //Log.d("Main_Activity","Error in stopping");
-            }
+            catch (IOException e) { }
         }
     }
 }
