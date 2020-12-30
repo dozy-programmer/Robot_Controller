@@ -21,7 +21,7 @@ Side View | Top View
 
 ## Purpose
 I wanted to use Arduino for a project and so I decided to make a simple robot that is controlled by an application. In addition, I wanted to use 3-D printing for this project 
-and decided to use it for constructing the base. I liked making this project because I was able to make the put together the hardware and control it using software. 
+and decided to use it for constructing the base. I liked making this project because I was able to put together the hardware and control it using software. 
 	
 ## Tools
 * Android Studio
