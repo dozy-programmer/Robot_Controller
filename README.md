@@ -10,14 +10,14 @@ This application controls a robot I made via bluetooth.
 
 ## App Layout
 
-App homepage           
-:-------------------------:
-![mainpage](https://user-images.githubusercontent.com/33325959/103318662-00386880-49e4-11eb-9a4c-772a35137881.png)
+| App Homepage | 
+| ------------- | 
+<img src="https://user-images.githubusercontent.com/33325959/103318662-00386880-49e4-11eb-9a4c-772a35137881.png" width="150" height="250"/> | 
 
 ## Robot Images
 Side View | Top View
 :-------------------------:|:-------------------------:
-![side_view](https://user-images.githubusercontent.com/33325959/103319414-b00ed580-49e6-11eb-8f18-b4521d8faf16.jpg) | ![top_view](https://user-images.githubusercontent.com/33325959/103319410-adac7b80-49e6-11eb-9a4a-31d9a3479cb6.jpg)
+<img src="https://user-images.githubusercontent.com/33325959/103319414-b00ed580-49e6-11eb-8f18-b4521d8faf16.jpg" width="200" height="250"/> | <img src="https://user-images.githubusercontent.com/33325959/103319410-adac7b80-49e6-11eb-9a4a-31d9a3479cb6.jpg" width="200" height="250"/>
 
 ## Purpose
 I wanted to use Arduino for a project and so I decided to make a simple robot that is controlled by an application. In addition, I wanted to use 3-D printing for this project 
